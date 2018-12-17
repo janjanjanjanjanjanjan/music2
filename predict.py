@@ -32,7 +32,7 @@ def prepare_sequences(notes, pitchnames, n_vocab):
     # map between notes and integers and back
     note_to_int = dict((note, number) for number, note in enumerate(pitchnames))
 
-    sequence_length = 100
+    sequence_length = 1
     network_input = []
     output = []
     for i in range(0, len(notes) - sequence_length, 1):

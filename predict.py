@@ -22,6 +22,10 @@ def generate():
     n_vocab = len(set(notes))
 
     network_input, normalized_input = prepare_sequences(notes, pitchnames, n_vocab)
+    print("normalized Input")
+    print(normalized_input)
+    print("n vocab")
+    print(n_vocab)
     model = create_network(normalized_input, n_vocab)
     prediction_output = generate_notes(model, network_input, pitchnames, n_vocab)
     create_midi(prediction_output)
